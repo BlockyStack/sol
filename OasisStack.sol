@@ -18,12 +18,4 @@ contract OasisStack is ERC721URIStorage {
         _setTokenURI(_tokenId, _tokenURI);
     }
 
-    function mixColor(uint256 _tokenIdA, uint256 _tokenIdB, string memory _tokenURI) public {
-        require(ownerOf(_tokenIdA) == msg.sender, "User does not own NFT");
-        require(ownerOf(_tokenIdB) == msg.sender, "User does not own NFT");
-        uint256 mixTokenId = (_tokenIdA + _tokenIdB) % 255255255;
-        _mint(msg.sender, mixTokenId);
-        _setTokenURI(mixTokenId, _tokenURI);
-    }
-
 }
