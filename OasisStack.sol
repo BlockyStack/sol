@@ -5,10 +5,10 @@ pragma solidity ^0.8.0;
 import "@openzeppelin/contracts/token/ERC721/ERC721.sol";
 import "@openzeppelin/contracts/token/ERC721/extensions/ERC721URIStorage.sol";
 
-contract OasisStack is ERC721URIStorage {
+contract BlockyStack is ERC721URIStorage {
     address private owner;
 
-    constructor() public ERC721("Oasis Stack", "OASISSTACK") {
+    constructor() public ERC721("Blocky Stack", "bSTACK") {
         owner = msg.sender;
     }
 
